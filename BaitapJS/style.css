@@ -1,0 +1,651 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+i,
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*HEADER*/
+
+.header {
+    position: fixed;
+    height: 50px;
+    background-color: white;
+    box-shadow: 3px 3px 3px #AAA;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-item {
+    display: flex;
+}
+
+.logo {
+    height: 40px;
+    margin-left: 50px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.list {
+    text-align: center;
+}
+
+.list li {
+    list-style: none;
+    display: inline-block;
+    line-height: 50px;
+    margin-left: 10px;
+    margin-right: 30px;
+    cursor: pointer;
+    color: inherit;
+}
+
+
+/*Body*/
+
+.main-content {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    width: 1300px;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 25%;
+    padding: 25px;
+    cursor: pointer;
+}
+
+.product .product-main {
+    box-shadow: 0px 14px 32px 0px rgb(0 0 0 / 15%);
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-main:hover {
+    transform: scale(1.15);
+}
+
+.product .product-img {
+    width: 100%;
+    height: 200px;
+}
+
+.product-img img {
+    width: 100%;
+    height: 215px;
+}
+
+.product i {
+    position: absolute;
+    font-size: 20px;
+    bottom: 120px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.product .product-detail {
+    text-align: center;
+    height: 100px;
+}
+
+.product-detail .product-name {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.product-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-content .product-price {
+    opacity: 0.7;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.product-content .product-quantity {
+    opacity: 0.7;
+    margin-right: 25px;
+    margin-bottom: 10px;
+}
+
+
+/*Cart*/
+
+.cart-main {
+    width: 100%;
+    display: none;
+}
+
+.empty-cart {
+    display: flex;
+    justify-content: center;
+    display: none;
+    margin-bottom: 100px;
+}
+
+.totalBuy {
+    text-align: right;
+}
+
+.totalBuy p {
+    margin-right: 150px;
+}
+
+.cart-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    padding: 15px;
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.buy {
+    padding: 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 150px;
+    margin-top: 50px;
+}
+
+.cart-content {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-content-main {
+    width: 1200px;
+}
+
+.cart-header {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.list-header {
+    width: 100%;
+    display: flex;
+}
+
+.list-header li {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    width: 15%;
+    justify-content: center;
+}
+
+.list-header .col-1 {
+    width: 60%;
+    justify-content: left;
+}
+
+.cart-detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.img-and-name {
+    width: 60%;
+    display: flex;
+}
+
+.cart-product-img {
+    width: 15%;
+}
+
+.cart-product-img img {
+    width: 100%;
+}
+
+.cart-product-name {
+    margin-left: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cpn-name {
+    font-weight: bold;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.cart-product-quantity {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-product-quantity p {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.cart-product-sub {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-product-total {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-product-clear {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+
+/*Modal*/
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    display: none;
+}
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-body {
+    margin: auto;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    border-radius: 5px;
+}
+
+.auth-form {
+    width: 700px;
+    z-index: 2;
+}
+
+.auth-form-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.auth-form-header p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.auth-form-group {
+    padding: 10px;
+    display: block;
+}
+
+.auth-form-group input {
+    padding: 7px;
+    width: 100%;
+}
+
+.auth-form-group span {
+    width: 100%;
+    display: block;
+    color: red;
+    font-size: 13px;
+}
+
+.form-name {
+    width: 100%;
+}
+
+.form-name span {
+    color: red;
+}
+
+.half {
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth-form-group-half {
+    width: 48%;
+    display: block;
+}
+
+.input-email {
+    width: 100%;
+}
+
+.auth-form-group-half span {
+    width: 100%;
+    display: block;
+}
+
+.third {
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth-form-group-third {
+    width: 30%;
+}
+
+.auth-form-group-third span {
+    width: 100%;
+    display: block;
+}
+
+select {
+    width: 100%;
+    height: 33px;
+}
+
+.input-mess {
+    height: 90px;
+    width: 100%;
+}
+
+.auth-form-footer {
+    width: 100%;
+}
+
+.footer-button {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.footer-cancel {
+    padding: 11px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.footer-accept {
+    padding: 11px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+}
+
+select option {
+    display: block;
+    width: 100%;
+}
+
+.auth-form-confirm {
+    display: none;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.confirm-header {
+    display: block;
+    width: 100%;
+    /* background-color: #ccc; */
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+.confirm-content {
+    display: flex;
+    justify-content: center;
+    /* gap: 5px; */
+    margin-top: 5px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.confirm-content button {
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 10px;
+    border: none;
+}
+
+.confirm-content button:hover {
+    opacity: 0.7;
+}
+
+.confirm-del {
+    background-color: red;
+}
+
+.confirm-back {
+    background-color: blue;
+}
+
+
+/*Bill*/
+
+.bill {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+}
+
+.bill-container {
+    width: 1200px;
+}
+
+.bill-header {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.bill-header-list {
+    display: flex;
+    width: 100%;
+}
+
+.bill-header-list li {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    width: 17%;
+    justify-content: center;
+}
+
+.bill-container-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bill-detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.detail {
+    width: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.openDetail {
+    color: red;
+    cursor: pointer;
+    margin-left: 15px;
+    
+}
+
+.remove-bill {
+    color: red;
+    cursor: pointer;
+    border: none;
+}
+
+.confirm-content-bill {
+    display: flex;
+    float: right;
+    gap: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.confirm-content-bill button {
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+
+/*Modal Bill Detail*/
+
+.header-billDetail {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.billDetail-list {
+    display: flex;
+    width: 100%;
+}
+
+.billDetail-list li {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    width: 33%;
+    justify-content: center;
+}
+
+.body-billDetail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.billDetail-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.billDetail-item-1 {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.confirm-del-modal {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .product {
+        width: 33%;
+    }
+}
+
+@media (max-width: 800px) {
+    .product {
+        width: 50%;
+    }
+}
+
+@media (max-width: 550px) {
+    .product {
+        width: 100%;
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        width: 500px;
+    }
+    .product {
+        width: 350px
+    }
+    .content {
+        text-align: center;
+        width: 500px;
+    }
+}

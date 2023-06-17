@@ -1,0 +1,181 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="header-nav">
+                <div class="header-item">
+                    <img src="./img/logo.jpg" alt="logo" class="logo" onclick="goToHome()">
+                </div>
+
+                <div class="header-item">
+                    <ul class="list">
+                        <li onclick="goToHome()">HOME</li>
+                        <li><a href="./bill.html">BILLS</a></li>
+                        <li><i class="fa-solid fa-cart-shopping" onclick="openCart()"></i> <span class="valueCart"></span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main-content">
+            <div class="content">
+
+            </div>
+
+            <div class="cart-main">
+                <div class="empty-cart">
+                    <img src="./img/empty-cart.png" alt="emptyCart">
+                </div>
+
+                <div class="cart-content">
+                    <div class="cart-content-main">
+                        <div class="cart-header">
+                            <ul class="list-header">
+                                <li class="col-1">Product Name</li>
+                                <li class="col-2">Quantity</li>
+                                <li class="col-3">Subtotal</li>
+                                <li class="col-4">Total</li>
+                                <li class="col-5">Clear Cart</li>
+                            </ul>
+                        </div>
+
+                        <div class="cart-detail">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="totalBuy">
+                    <p class="totalBuy-detail">Total: 0</p>
+                </div>
+
+                <div class="cart-btn">
+                    <button class="back" onclick="back()">Back to Shopping</button>
+                    <button class="buy" onclick="buy()">Buy</button>
+                </div>
+
+                <div class="modal">
+                    <div class="modal-overlay">
+
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="auth-form">
+                            <div class="auth-form-header">
+                                <p class="auth-form-heading">Thông tin người mua</p>
+                                <i class="fa-solid fa-x" onclick="backToCart()"></i>
+                            </div>
+
+                            <div class="auth-form-form">
+                                <div class="auth-form-group">
+                                    <p class="form-name">Họ và tên</p>
+                                    <div class="half">
+                                        <div class="auth-form-group-half">
+                                            <input type="text" class="input-firstName" placeholder="Họ">
+                                            <span class="errorFirstName"></span>
+                                        </div>
+
+                                        <div class="auth-form-group-half">
+                                            <input type="text" class="input-lastName" placeholder="Tên">
+                                            <span class="errorLastName"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="auth-form-group">
+                                    <p class="form-email">Email</p>
+                                    <input type="text" class="input-email" placeholder="Email">
+                                    <span class="errorEmail"></span>
+                                </div>
+
+                                <div class="auth-form-group">
+                                    <p class="form-sdt">Số điện thoại</p>
+                                    <input type="text" class="input-phone" placeholder="Số điện thoại">
+                                    <span class="errorPhone"></span>
+                                </div>
+
+                                <div class="auth-form-group">
+                                    <p class="form-diachi">Địa chỉ</p>
+
+                                    <div class="third">
+                                        <div class="auth-form-group-third">
+                                            <select name="province" id="Province">
+                                                    <option value="0" class="selectTinh" id= "">-- Chọn Tỉnh / Thành phố --</option>
+                                                </select>
+                                            <span class="errorProvince"></span>
+                                        </div>
+
+                                        <div class="auth-form-group-third">
+                                            <select name="district" id="District">
+                                                    <option value="0" class="selectHuyen" id="">-- Chọn Huyện / Quận --</option>
+                                                </select>
+                                            <span class="errorDistrict"></span>
+                                        </div>
+
+                                        <div class="auth-form-group-third">
+                                            <select name="ward" id="Ward">
+                                                    <option value="0" class="selectXa" id="">-- Chọn Phường / Xã --</option>
+                                                </select>
+                                            <span class="errorWard"></span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="auth-form-group">
+                                    <input type="text" class="input-number" placeholder="Số nhà">
+                                    <span class="loiNumber"></span>
+                                </div>
+
+                                <div class="auth-form-group">
+                                    <p class="form-mess">Lời nhắn</p>
+                                    <textarea type="text" class="input-mess" cols="30" rows="10">
+                                        </textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="auth-form-footer">
+                                <div class="footer-button">
+                                    <button class="footer-cancel" onclick="backToCart()">Hủy</button>
+                                    <button class="footer-accept">Xác nhận</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="auth-form-confirm">
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="./JS/data.js"></script>
+<script src="./JS/localStorage.js"></script>
+<script src="./JS/handleProduct.js"></script>
+<script src="./JS/handleCart.js"></script>
+<script src="./JS/position.js"></script>
+<script src="./JS/genIdRandom.js"></script>
+<script src="./JS/validate.js"></script>
+<script src="./JS/handleBuy.js"></script>
+
+</html>

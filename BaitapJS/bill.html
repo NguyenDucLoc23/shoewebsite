@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.3.0-web/css/all.min.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="header-nav">
+                <div class="header-item">
+                    <a href="./index.html">
+                        <img src="./img/logo.jpg" alt="logo" class="logo">
+                    </a>
+                </div>
+                <div class="header-item">
+                    <ul class="list">
+                        <li><a href="index.html"> HOME</a></li>
+                        <li>BILLS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bill">
+            <div class="bill-container">
+                <div class="bill-header">
+                    <ul class="bill-header-list">
+                        <li class="bill-1">Code</li>
+                        <li class="bill-2">Customer Name</li>
+                        <li class="bill-3">Date</li>
+                        <li class="bill-4">Return Stock</li>
+                        <li class="bill-5">Total Quantity</li>
+                        <li class="bill-6">Total Price</li>
+                    </ul>
+                </div>
+                <div class="bill-container-item">
+                </div>
+            </div>
+
+            <div class="modal">
+                <div class="modal-overlay">
+                </div>
+                <div class="modal-body">
+                    <div class="auth-form">
+                        <div class="auth-form-header">
+                            <p class="auth-form-heading">Thông tin đơn hàng</p>
+                            <i class="fa-solid fa-x" onclick="backToBill()"></i>
+                        </div>
+
+                        <div class="auth-form-form">
+                            <div class="header-billDetail">
+                                <ul class="billDetail-list">
+                                    <li class="billDetail-1">Tên sản phẩm</li>
+                                    <li class="billDetail-1">Số lượng</li>
+                                    <li class="billDetail-1">Giá tiền từng sản phẩm</li>
+                                </ul>
+                            </div>
+
+                            <div class="body-billDetail">
+
+                            </div>
+
+                            <div class="confirm-del-modal">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="JS/handleBill.js"></script>
+
+</html>
